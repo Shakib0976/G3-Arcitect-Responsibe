@@ -135,43 +135,92 @@ main > section{
 .fact-description{
     max-width: 540px;
 }
+/* sponser box design */
+.sponser-info{
+    max-width: 540px;
+    margin:50px auto;
+    text-align: center;
+}
+.sponsor-company{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
 
-@media  screen and (max-width:570px) {
 
-    .navbar, 
-     .nav-links,
-     .features-container {
-        flex-direction: column;
-    }
-    .img-container{
-        grid-template-columns: repeat(1, 1fr);
-    }
-    .features{
-        margin-left: 20px;
-    }
-    .dtn1{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    } 
+}
+.sponsor-company img{
+    filter: grayscale(100%);
 }
 
 
-@media screen and (min-width:577px) and (max-width:992px) {
-    .navbar, 
-     .nav-links,
-    
-    .features-container {
-        flex-direction: column;}
+@media screen and (max-width:576px) {
+    .navbar,
+    .nav-links,
+    .features-container{
+        flex-direction: column;
+    }
     .img-container{
-            grid-template-columns: repeat(2, 1fr);}  
+        margin-left: 30px;
+    }
+
     .features{
-                margin-left: 20px;
-            } 
-    .dtn1{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }        
+        margin-left: 30px;
+    }
+    .img-container,
+     .fact-container,
+     .sponsor-company{
+        grid-template-columns: repeat(1,1fr);
+    }
+
+    .fact-container{
+        justify-items: center;
+        gap: 24px;
+    
+    }
+    .fact-title{
+        margin-left: 30px;
+    }
+
+    .sponsor-company{
+        justify-items: center;
+        gap: 50px;
+    }
+
+    
+}
+
+@media screen and (min-width:577px) and (max-width:992px) {
+
+    .navbar,
+    .nav-links,
+    .features-container{
+        flex-direction: column;
+    }
+
+    .features{
+        margin-left: 60px;}
+
+    .img-container{
+            margin-left: 60px;
+        }    
+
+    .img-container, .fact-container{
+        grid-template-columns: repeat(2,1fr);
+    } 
+
+
+    .fact-container{
+        justify-items: center;
+        gap: 24px;
+        
+        
+    }
+    .fact-title{
+        margin-left: 60px;
+    }
+    .sponsor-company{
+        grid-template-columns: repeat(3, 1fr);
+        justify-items: center;
+        gap: 50px;
+    }
     
 }
